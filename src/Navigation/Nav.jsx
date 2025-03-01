@@ -24,7 +24,7 @@ const Nav = () => {
       <div>
         {
           isActive ? (<div>
-            <input type="text" style={{backgroundColor:bgColor,color:color,borderColor:bgColor}} placeholder="Enter The Product.."></input>
+            <input className=" px-4 border-white border rounded-sm" type="text" style={{backgroundColor:bgColor,color:color}} placeholder="Enter The Product.."></input>
           </div>) :(<CiSearch size={20} onClick={changeInput}  />)
         }
       </div>
