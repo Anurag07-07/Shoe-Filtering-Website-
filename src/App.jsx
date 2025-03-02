@@ -18,8 +18,9 @@ const App = () => {
     setQuery(e.target.value)    
   }
 
-  const FilteredItem = data.filter((item)=>(item.title.toLowerCase().indexOf(Query)!=-1))
-
+  const FilteredItem = data.filter(
+    (product) => product.title.toLowerCase().indexOf(Query.toLowerCase()) !== -1
+  );
   // Radio Filter 
 
   const handleChange = (e)=>{
@@ -62,7 +63,7 @@ const App = () => {
   return (
     <div className=" m-0 p-0 box-border">
       <SideBar handleChange={handleChange}></SideBar>
-      <Nav Query = {Query}></Nav>
+      <Nav Query = {Query} handleInputChange={handleInputChange}></Nav>
       <Recommanded handleClick = {handleClick}></Recommanded>
       <Product result={result}></Product>
     </div>

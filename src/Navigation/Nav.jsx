@@ -2,7 +2,7 @@ import { useState } from "react"
 import { CiSearch } from "react-icons/ci"
 import { FaHeart, FaShoppingCart,FaUser,FaSun,FaMoon  } from "react-icons/fa"
 
-const Nav = () => {
+const Nav = ({handleInputChange,Query}) => {
 
   const [theme,setTheme] = useState(false)
   const [bgColor,setbgColor] = useState('white')
@@ -24,7 +24,7 @@ const Nav = () => {
       <div>
         {
           isActive ? (<div>
-            <input className=" px-4 border-white border rounded-sm" type="text" style={{backgroundColor:bgColor,color:color}} placeholder="Enter The Product.."></input>
+            <input className=" px-4 border-white border rounded-sm" type="text" value={Query} style={{backgroundColor:bgColor,color:color}} onChange={handleInputChange} placeholder="Enter The Product.."></input>
           </div>) :(<CiSearch size={20} onClick={changeInput}  />)
         }
       </div>
