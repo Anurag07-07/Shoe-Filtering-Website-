@@ -1,29 +1,40 @@
-const Price = () => {
+import Input from "../components/Input"
+
+const Price = ({handleChange}) => {
   return (
     <div className=" pt-3">
       <div className=" font-extrabold text-2xl">PRICE</div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>All</label>
-        <input type="radio" name="type" size={50}></input>
+      <Input
+      handleChange={handleChange}
+      value=''
+      title="All"
+      name="test2"
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value={50}
+      title="$0-$50"
+      name="test2"
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value={100}
+      title="$50-$100"
+      name="test2"
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value={150}
+      title="$100-$150"
+      name="test2"
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value={200}
+      title="Over $150"
+      name="test2"
+      ></Input>
       </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>$0-$50</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>$50-$100</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>$100-$150</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>$150 above</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      
-    </div>
   )
 }
 

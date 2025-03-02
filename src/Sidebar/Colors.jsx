@@ -1,27 +1,43 @@
-const Colors = () => {
+import Input from "../components/Input"
+
+const Colors = ({handleChange}) => {
   return (
     <div className=" pt-3">
       <div className=" font-extrabold text-2xl">COLORS</div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>All</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>Black</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>White</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>Blue</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
-      <div className=" flex text-xl font-extralight justify-between items-center gap-x-3">
-        <label>Brown</label>
-        <input type="radio" name="type" size={50}></input>
-      </div>
+      <Input
+      handleChange={handleChange}
+      value=''
+      title="All"
+      name="test3"
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value='black'
+      title="Black"
+      name="test3"
+      color = 'black'
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value='blue'
+      title="Blue"
+      name="test3"
+      color = 'blue'
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value='red'
+      title="Red"
+      name="test3"
+      color = 'red'
+      ></Input>
+      <Input
+      handleChange={handleChange}
+      value='green'
+      title="Green"
+      name="test3"
+      color = 'green'
+      ></Input>
       
     </div>
   )

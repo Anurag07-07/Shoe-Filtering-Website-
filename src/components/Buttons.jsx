@@ -1,6 +1,6 @@
-const Buttons = () => {
+const Buttons = ({onClickHandler,value,title}) => {
   return (
-    <div>Buttons</div>
+    <button className=" border px-2 py-1 rounded-xl shadow shadow-black" onClick={onClickHandler} value={value}>{title}</button>
   )
 }
 
